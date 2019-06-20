@@ -19,4 +19,9 @@ public class TestFizzBuzz {
     public void get_two_when_I_pass_two() {
        checkFizzBuzz(2, "2");
     }
+
+    @Test
+    public void get_fizz_when_I_pass_3() {
+        checkFizzBuzz(3, "fizz");
+    }
 }
