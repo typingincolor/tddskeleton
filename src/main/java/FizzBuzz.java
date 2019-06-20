@@ -1,5 +1,5 @@
 public class FizzBuzz {
-    public static void fizzBuzz(int i) {
-
+    public static String fizzBuzz(int i) {
+        return "1";
     }
 }
