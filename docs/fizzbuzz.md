@@ -34,12 +34,4 @@ Buzz
 * A number is fizz if it is divisible by 3 or if it has a 3 in it
 * A number is buzz if it is divisible by 5 or if it has a 5 in it
 
-## Test Cases
-* Can I call FizzBuzz
-* Get “1” when I pass in 1
-* Get “2” when I pass in 2
-* Get “Fizz” when I pass in 3
-* Get “Buzz” when I pass in 5
-* Get “Fizz” when I pass in 6 (a multiple of 3)
-* Get “Buzz” when I pass in 10 (a multiple of 5)
-* Get “FizzBuzz” when I pass in 15 (a multiple of 3 and 5)
+
