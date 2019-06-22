@@ -1,0 +1,45 @@
+# FizzBuzz
+
+## Initial Requirements
+Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz “.
+
+## Sample Output
+
+```
+1
+2
+Fizz
+4
+Buzz
+Fizz
+7
+8
+Fizz
+Buzz
+11
+Fizz
+13
+14
+FizzBuzz
+16
+17
+Fizz
+19
+Buzz
+... etc up to 100
+```
+
+## Additional Requirements
+
+* A number is fizz if it is divisible by 3 or if it has a 3 in it
+* A number is buzz if it is divisible by 5 or if it has a 5 in it
+
+## Test Cases
+* Can I call FizzBuzz
+* Get “1” when I pass in 1
+* Get “2” when I pass in 2
+* Get “Fizz” when I pass in 3
+* Get “Buzz” when I pass in 5
+* Get “Fizz” when I pass in 6 (a multiple of 3)
+* Get “Buzz” when I pass in 10 (a multiple of 5)
+* Get “FizzBuzz” when I pass in 15 (a multiple of 3 and 5)
