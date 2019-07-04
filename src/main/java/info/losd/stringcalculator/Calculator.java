@@ -6,6 +6,10 @@ public class Calculator {
 
         if(tokens.length > 2) throw new RuntimeException();
 
+        for(String number : tokens) {
+            if (!number.isEmpty()) Integer.parseInt(number);
+        }
+
         return 0;
     }
 }
