@@ -1,6 +1,7 @@
 package info.losd.stringcalculator;
 
 import org.junit.Test;
+
 import static info.losd.stringcalculator.Calculator.add;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
@@ -9,11 +10,6 @@ public class TestStringCalculator {
     @Test
     public void test_i_can_call_it() {
         add("");
-    }
-
-    @Test(expected = RuntimeException.class)
-    public void when_more_than_2_numbers_then_exception_is_thrown() {
-        add("1,2,3");
     }
 
     @Test
@@ -34,5 +30,10 @@ public class TestStringCalculator {
     @Test
     public void when_two_numbers_passed_sum_is_returned() {
         assertThat(add("1,2"), is(equalTo(3)));
+    }
+
+    @Test
+    public void can_handle_adding_multiple_numbers() {
+        assertThat(add("1,2,3,4,5"), is(equalTo(1 + 2 + 3 + 4 + 5)));
     }
 }

@@ -5,8 +5,6 @@ public class Calculator {
         int sum = 0;
         String[] tokens = numbers.split(",");
 
-        if(tokens.length > 2) throw new RuntimeException();
-
         for(String number : tokens) {
             if (!number.isEmpty()) {
                 sum += Integer.parseInt(number);
