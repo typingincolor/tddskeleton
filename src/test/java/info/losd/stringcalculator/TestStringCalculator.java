@@ -25,4 +25,14 @@ public class TestStringCalculator {
     public void when_invalid_number_then_exception_is_thrown() {
         add("1,x");
     }
+
+    @Test
+    public void when_one_number_passed_number_is_returned() {
+        assertThat(add("12"), is(equalTo(12)));
+    }
+
+    @Test
+    public void when_two_numbers_passed_sum_is_returned() {
+        assertThat(add("1,2"), is(equalTo(3)));
+    }
 }
