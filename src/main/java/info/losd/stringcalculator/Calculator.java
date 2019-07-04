@@ -35,12 +35,7 @@ public class Calculator {
 
         if (negativeNumbers.isEmpty()) return sum;
 
-        String message = "Negative numbers not allowed:";
-        for (int num : negativeNumbers) {
-            message += " " + num;
-        }
-
-        throw new RuntimeException(message);
+        throw new RuntimeException("Negative numbers not allowed: " + negativeNumbers.toString());
     }
 }
 

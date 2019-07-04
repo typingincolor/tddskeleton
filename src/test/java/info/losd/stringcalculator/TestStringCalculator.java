@@ -50,7 +50,7 @@ public class TestStringCalculator {
     @Test
     public void do_not_allow_negative_numbers() {
         thrown.expect(RuntimeException.class);
-        thrown.expectMessage("Negative numbers not allowed: -1 -2");
+        thrown.expectMessage("Negative numbers not allowed: [-1, -2]");
 
         add("1,-1,2,-2");
     }
