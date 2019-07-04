@@ -29,7 +29,7 @@ public class Calculator {
 
                 if (x<0) negativeNumbers.add(x);
 
-                sum += Integer.parseInt(number);
+                sum += x > 1000 ? 0 : x;
             }
         }
 

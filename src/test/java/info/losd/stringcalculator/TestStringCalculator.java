@@ -54,4 +54,9 @@ public class TestStringCalculator {
 
         add("1,-1,2,-2");
     }
+
+    @Test
+    public void ignore_numbers_over_1000() {
+        assertThat(add("2,1001"), is(equalTo(2)));
+    }
 }
