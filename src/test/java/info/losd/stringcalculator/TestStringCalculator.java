@@ -8,11 +8,6 @@ import static org.hamcrest.Matchers.*;
 
 public class TestStringCalculator {
     @Test
-    public void test_i_can_call_it() {
-        add("");
-    }
-
-    @Test
     public void returns_zero_for_empty_string() {
         assertThat(add(""), is(equalTo(0)));
     }
@@ -35,5 +30,10 @@ public class TestStringCalculator {
     @Test
     public void can_handle_adding_multiple_numbers() {
         assertThat(add("1,2,3,4,5"), is(equalTo(1 + 2 + 3 + 4 + 5)));
+    }
+
+    @Test
+    public void can_use_newline_as_a_delimiter() {
+        assertThat(add("1\n2,3"), is(equalTo(1+2+3)));
     }
 }
