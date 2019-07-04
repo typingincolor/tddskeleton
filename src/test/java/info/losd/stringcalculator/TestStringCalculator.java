@@ -36,4 +36,9 @@ public class TestStringCalculator {
     public void can_use_newline_as_a_delimiter() {
         assertThat(add("1\n2,3"), is(equalTo(1+2+3)));
     }
+
+    @Test
+    public void when_delimiter_is_specified_then_use_it() {
+        assertThat(add("//;\n1;2"), is(equalTo(1+2)));
+    }
 }
