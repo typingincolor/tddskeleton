@@ -1,5 +1,7 @@
 package info.losd.stringcalculator;
 
+import java.util.LinkedList;
+
 public class Calculator {
     public static int add(String numbers) {
         String numbersWithoutDelimiters = numbers;
@@ -16,15 +18,29 @@ public class Calculator {
 
     private static int add(String numbers, String delimiter) {
         int sum = 0;
+
+        LinkedList<Integer> negativeNumbers = new LinkedList<>();
+
         String[] tokens = numbers.split(delimiter);
 
         for (String number : tokens) {
             if (!number.isEmpty()) {
+                int x = Integer.parseInt(number);
+
+                if (x<0) negativeNumbers.add(x);
+
                 sum += Integer.parseInt(number);
             }
         }
 
-        return sum;
+        if (negativeNumbers.isEmpty()) return sum;
+
+        String message = "Negative numbers not allowed:";
+        for (int num : negativeNumbers) {
+            message += " " + num;
+        }
+
+        throw new RuntimeException(message);
     }
 }
 

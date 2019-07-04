@@ -1,6 +1,8 @@
 package info.losd.stringcalculator;
 
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 import static info.losd.stringcalculator.Calculator.add;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -40,5 +42,16 @@ public class TestStringCalculator {
     @Test
     public void when_delimiter_is_specified_then_use_it() {
         assertThat(add("//;\n1;2"), is(equalTo(1+2)));
+    }
+
+    @Rule
+    public ExpectedException thrown = ExpectedException.none();
+
+    @Test
+    public void do_not_allow_negative_numbers() {
+        thrown.expect(RuntimeException.class);
+        thrown.expectMessage("Negative numbers not allowed: -1 -2");
+
+        add("1,-1,2,-2");
     }
 }
